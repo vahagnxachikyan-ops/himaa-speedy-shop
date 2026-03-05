@@ -4,12 +4,12 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Smartphone, Home, UtensilsCrossed, Watch, Wrench, Lightbulb } from "lucide-react";
 
 const categories = [
-  { key: "electronics", icon: Smartphone, path: "/category/electronics" },
-  { key: "smartHome", icon: Lightbulb, path: "/category/smart-home" },
-  { key: "home", icon: Home, path: "/category/home" },
-  { key: "kitchen", icon: UtensilsCrossed, path: "/category/kitchen" },
-  { key: "accessories", icon: Watch, path: "/category/accessories" },
-  { key: "tools", icon: Wrench, path: "/category/tools" },
+  { key: "electronics", icon: Smartphone, path: "/electronics" },
+  { key: "smartHome", icon: Lightbulb, path: "/smart-home" },
+  { key: "home", icon: Home, path: "/home" },
+  { key: "kitchen", icon: UtensilsCrossed, path: "/kitchen" },
+  { key: "accessories", icon: Watch, path: "/accessories" },
+  { key: "tools", icon: Wrench, path: "/tools" },
 ];
 
 const CategoriesSection = () => {

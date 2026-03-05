@@ -12,11 +12,11 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [language, setLanguage] = useState<Language>(() => {
     const stored = localStorage.getItem("himaa-lang");
-    if (stored && ["en", "ru", "am"].includes(stored)) return stored as Language;
+    if (stored && ["am", "ru", "en"].includes(stored)) return stored as Language;
     const browserLang = navigator.language.slice(0, 2);
-    if (browserLang === "ru") return "ru";
     if (browserLang === "hy") return "am";
-    return "en";
+    if (browserLang === "ru") return "ru";
+    return "am"; // Default to Armenian
   });
 
   const handleSetLanguage = useCallback((lang: Language) => {

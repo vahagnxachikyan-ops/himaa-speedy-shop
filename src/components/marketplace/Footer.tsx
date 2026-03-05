@@ -7,18 +7,14 @@ const Footer = () => {
   const { t } = useLanguage();
 
   return (
-    <footer className="border-t border-border bg-card">
+    <footer className="border-t border-border bg-card/80 backdrop-blur-sm">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Brand */}
           <div>
             <img src={himaaLogo} alt="HIMAA" className="h-8 w-auto mb-4" />
-            <p className="text-sm text-muted-foreground">
-              Get it today, not tomorrow.
-            </p>
+            <p className="text-sm text-muted-foreground">{t("hero.slogan")}</p>
           </div>
 
-          {/* Customer Service */}
           <div>
             <h4 className="font-display font-semibold text-foreground mb-4 text-sm uppercase tracking-wider">
               {t("footer.support")}
@@ -34,9 +30,10 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Legal */}
           <div>
-            <h4 className="font-display font-semibold text-foreground mb-4 text-sm uppercase tracking-wider">Legal</h4>
+            <h4 className="font-display font-semibold text-foreground mb-4 text-sm uppercase tracking-wider">
+              {t("footer.legal")}
+            </h4>
             <ul className="space-y-2">
               {["footer.privacy", "footer.terms"].map(key => (
                 <li key={key}>
@@ -48,9 +45,10 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Social */}
           <div>
-            <h4 className="font-display font-semibold text-foreground mb-4 text-sm uppercase tracking-wider">Social</h4>
+            <h4 className="font-display font-semibold text-foreground mb-4 text-sm uppercase tracking-wider">
+              {t("footer.social")}
+            </h4>
             <div className="flex gap-3">
               <a href="#" className="p-2 rounded-lg bg-secondary text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all">
                 <Instagram className="h-5 w-5" />
@@ -65,7 +63,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-10 pt-6 border-t border-border text-center">
-          <p className="text-xs text-muted-foreground">© 2026 HIMAA. All rights reserved.</p>
+          <p className="text-xs text-muted-foreground">&copy; 2026 HIMAA. All rights reserved.</p>
         </div>
       </div>
     </footer>
