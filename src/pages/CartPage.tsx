@@ -1,5 +1,4 @@
-import Header from "@/components/marketplace/Header";
-import Footer from "@/components/marketplace/Footer";
+import PageLayout from "@/components/marketplace/PageLayout";
 import { useCart } from "@/contexts/CartContext";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Plus, Minus, Trash2 } from "lucide-react";
@@ -10,9 +9,8 @@ const CartPage = () => {
   const { t } = useLanguage();
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <main className="container mx-auto px-4 py-10 max-w-3xl">
+    <PageLayout>
+      <div className="container mx-auto px-4 py-10 max-w-3xl">
         <h1 className="text-3xl font-display font-bold text-foreground mb-8">{t("cart.title")}</h1>
 
         {items.length === 0 ? (
@@ -71,9 +69,8 @@ const CartPage = () => {
             </div>
           </div>
         )}
-      </main>
-      <Footer />
-    </div>
+      </div>
+    </PageLayout>
   );
 };
 
